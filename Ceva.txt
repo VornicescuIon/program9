@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Propoziții JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Propoziții JavaScript</h1>
+
+  <p id="text">Bun venit pe pagina mea!</p>
+
+  <button onclick="schimbaTextul()">Apasă-mă</button>
+
+  <script>
+    // Schimbă textul și culoarea la fiecare apăsare
+    function schimbaTextul() {
+      const paragraf = document.getElementById("text");
+      const culori = ["red", "blue", "green", "purple", "orange"];
+      const mesaje = [
+        "Salut Antonio!",
+        "Sper să ai o zi grozavă!",
+        "JavaScript e distractiv!",
+        "Apasă din nou și vezi ce se întâmplă!",
+        "Bravo, funcționează!"
+      ];
+
+      // Alege aleatoriu o culoare și un mesaj
+      const culoare = culori[Math.floor(Math.random() * culori.length)];
+      const mesaj = mesaje[Math.floor(Math.random() * mesaje.length)];
+
+      paragraf.style.color = culoare;
+      paragraf.innerHTML = mesaj;
+    }
+  </script>
+
+</body>
+</html>
